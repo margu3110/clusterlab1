@@ -1,0 +1,10 @@
+.terraform/
+charts/
+
+.env*
+.envrc
+
+*.pem
+
+state.json
+builds/
