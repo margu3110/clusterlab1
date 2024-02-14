@@ -2,7 +2,7 @@ terraform {
     backend "s3" {
         profile = "terraform"
         key = "terraform_clusterlab1/tfstate.tfstate"
-        bucket = "marcelo-tftate-backup-clusterlab1-2024"
+        bucket = var.s3_backend[var.account]
         region = "us-east-1"
     }
 }
