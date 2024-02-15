@@ -5,7 +5,7 @@
 # Configure the AWS Provider
 provider "aws" {
     region = var.region
-    profile = "terraform"
+    profile = var.profile
 }
 
 
@@ -74,7 +74,7 @@ module "eks" {
     one = {
       name = "node-group-1"
 
-      instance_types = ["t3.small"]
+      instance_types = ["t2.micro"]
 
       min_size     = 1
       max_size     = 3
@@ -84,7 +84,7 @@ module "eks" {
     two = {
       name = "node-group-2"
 
-      instance_types = ["t3.small"]
+      instance_types = ["t2.micro"]
 
       min_size     = 1
       max_size     = 2
